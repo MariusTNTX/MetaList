@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MetaList - Buscador Avanzado</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Scripts GgitHub -->
+  <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script src="/cdn-cgi/apps/head/GC70lTtl46FkC1JcBx7amV9L0W0.js"></script>
+  <script src="../../../bootstrap/noUiSlider-master/recuperado1.js"></script> -->
+
+  <!-- Favicons -->
+  <link href="imagenes/basico/favicon MetaList.png" rel="icon">
+  <link href="imagenes/basico/appletouch2 MetaList.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+  <!-- <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+
+  <!-- GitHub CSS -->
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="../../../bootstrap/noUiSlider-master/documentation/assets/base.css?v=4" rel="stylesheet">
+  <link href="../../../bootstrap/noUiSlider-master/documentation/assets/prism.css" rel="stylesheet">
+  <script src="../../../bootstrap/noUiSlider-master/documentation/assets/wNumb.js"></script>
+  <link href="../../../bootstrap/noUiSlider-master/dist/nouislider.css?v=1560" rel="stylesheet">
+  <script src="../../../bootstrap/noUiSlider-master/dist/nouislider.js?v=1560"></script>
+  <link rel="canonical" href="https://refreshless.com/nouislider/examples/"> -->
+
+  <!-- =======================================================
+  * Template Name: Gp - v4.9.1
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0">
+        <a href="index.html">
+          <img src="imagenes/basico/logo_MetaList.png" alt="logo_MetaList">
+        </a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Bandas</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=bands">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomBand" href="#">Banda Aleatoria</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Álbumes</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=albums">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomAlbum" href="#">Álbum Aleatorio</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Discográficas</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=labels">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomLabel" href="#">Discográfica Aleatoria</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Músicos</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=musicians">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomMusician" href="#">Músico Aleatorio</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="dropdown login me-2" id="dropdownLogin">
+        <button type="button" class="btn text-white dropdown-toggle py-2 px-4" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+          <i class="bi bi-person-fill"></i>
+          <span class="d-none d-sm-inline-block" id="userName">Login</span>
+        </button>
+        <form action="" method="get" class="dropdown-menu dropdown-menu-end p-4 w-50" id="loginForm">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="email@ejemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="loginPass" class="form-label">Contraseña</label>
+            <div class="position-relative">
+              <input type="password" class="form-control" id="loginPass" placeholder="Contraseña" required>
+              <i id="loginPassEye" class="bi bi-eye-fill position-absolute top-50 end-0 translate-middle-y me-2"></i>
+            </div>
+          </div>
+          <div class="text-center mb-2"><button type="submit" class="btn btn-primary" id="loginButton">Iniciar Sesión</button></div>
+          <div class="mb-3 text-center">
+            <a href="#" id="forgPass">He olvidado mi contraseña</a>
+          </div>
+          <hr class="mt-4">
+          <div id="regist" class="text-center">
+            <label for="regist" class="form-label">¿No tienes cuenta?</label>
+            <div><a href="./registro.html">Regístrate</a></div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Buscador Avanzado</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Buscador Avanzado</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page first">
+
+      <div class="container busq" data-aos="fade-up">
+
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+          <div class="row">
+
+            <!-- Elementos (Solo resolución pequeña) -->
+            <section id="portfolio" class="portfolio mini-section estado2b">
+              <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="section-title">
+                  <h2>Elementos</h2>
+                  <p>Lista de:</p>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                      <li data-filter=".filter-bandas1" class="filterButton filterBandas" id="filterBandas1">Bandas</li>
+                      <li data-filter=".filter-albumes1" class="filterButton filterAlbumes" id="filterAlbumes1">Álbumes</li> 
+                      <!-- <li data-filter=".filter-canciones">Canciones</li> -->
+                      <li data-filter=".filter-discograf1" class="filterButton filterDiscogs" id="filterDiscogs1">Discográficas</li>
+                      <!-- <li data-filter=".filter-estudios">Estudios de Grabación</li>
+                      <li data-filter=".filter-generos">Géneros</li>
+                      <li data-filter=".filter-paises">Paises</li>
+                      <li data-filter=".filter-">Años</li> -->
+                      <li data-filter=".filter-musicos1" class="filterButton filterMusicos" id="filterMusicos1">Músicos</li>
+                      <!-- <li data-filter=".filter-">Productores</li>
+                      <li data-filter=".filter-">Temas de Letra</li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- MENÚ -->
+            <div class="col-12 col-md-4 col-lg-3 menu position-relative" data-aos="fade-up" data-aos-delay="100">
+
+              <!-- Limpiar -->
+              <span class="position-absolute top-0 end-0 m-2 p-1 bg-red rounded-circle text-center shadow" id="cleanSearch" title="Limpiar Campos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-eraser-fill text-white" viewBox="0 0 16 16">
+                  <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm.66 11.34L3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"></path>
+                </svg>
+              </span>
+              <!-- Filtros -->
+              <section class="mini-section">
+                <div class="container mb-3">
+
+                  <div class="section-title">
+                    <h2>Filtros</h2>
+                    <p>Filtrar por:</p>
+                  </div>
+
+                  <!-- Texto -->
+                  <!-- <input type="text" name="busq" id="busq" placeholder="Texto de búsqueda" style="width: 100%"> -->
+                  <div class="form-floating mb-3" id="mainSearch">
+                    <input type="text" class="form-control" name="busq" id="busq" placeholder="Título del Álbum">
+                    <label for="busq">Título del Álbum</label>
+                  </div>
+
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="estrictSearch">
+                    <label class="form-check-label" for="estrictSearch">Búsqueda Estricta</label>
+                  </div>
+
+                  <br>
+
+                  <h2 class="menu-h2 mb-3">Intervalos</h2>
+                  <div class="accordion" id="intervalsAccordion">
+
+                    <!-- Fecha -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          Año de Lanzamiento
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#intervalsAccordion">
+                        <div class="accordion-body">
+                          <div class="row">
+                            <h6>Desde:</h6>
+                            <div class="col-12 text-center">
+                              <input id="fechaDesde1" type="range" class="form-range" value="1968" min="1968" max="2023" step="1">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="fecha1" id="fechaDesde2" min="1968" max="2023" step="1">
+                            </div>
+                            <script>
+                              document.getElementById('fechaDesde1').addEventListener('input', function () {
+                                document.getElementById('fechaDesde2').value = this.value;
+                              });
+                            </script>
+                            <h6>Hasta:</h6>
+                            <div class="col-12 text-center">
+                              <input id="fechaHasta1" type="range" class="form-range" value="1968" min="1968" max="2023" step="1">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="fecha2" id="fechaHasta2" min="1968" max="2023" step="1">
+                            </div>
+                            <script>
+                              document.getElementById('fechaHasta1').addEventListener('input', function () {
+                                document.getElementById('fechaHasta2').value = this.value;
+                              });
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Puntuación -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Puntuación
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#intervalsAccordion">
+                        <div class="accordion-body">
+                          <div class="row">
+                            <h6>Desde:</h6>
+                            <div class="col-12 text-center">
+                              <input id="puntDesde1" type="range" class="form-range" value="0" min="0" max="5000" step="50">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="punt1" id="puntDesde2" min="0" max="5000" step="50"> P
+                            </div>
+                            <script>
+                              document.getElementById('puntDesde1').addEventListener('input', function () {
+                                document.getElementById('puntDesde2').value = this.value;
+                              });
+                            </script>
+                            <h6>Hasta:</h6>
+                            <div class="col-12 text-center">
+                              <input id="puntHasta1" type="range" class="form-range" value="0" min="0" max="5000" step="50">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="punt2" id="puntHasta2" min="0" max="5000" step="50"> P
+                            </div>
+                            <script>
+                              document.getElementById('puntHasta1').addEventListener('input', function () {
+                                document.getElementById('puntHasta2').value = this.value;
+                              });
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Escuchas -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hEscuchas">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cEscuchas" aria-expanded="false" aria-controls="cEscuchas">
+                          Escuchas
+                        </button>
+                      </h2>
+                      <div id="cEscuchas" class="accordion-collapse collapse" aria-labelledby="hEscuchas"
+                        data-bs-parent="#intervalsAccordion">
+                        <div class="accordion-body">
+                          <div class="row">
+                            <h6>Desde:</h6>
+                            <div class="col-12 text-center">
+                              <input id="escuDesde1" type="range" class="form-range" value="0" min="0" max="1000000" step="10">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="escu1" id="escuDesde2" min="0" max="1000000" step="10"> k
+                            </div>
+                            <script>
+                              document.getElementById('escuDesde1').addEventListener('input', function () {
+                                document.getElementById('escuDesde2').value = this.value;
+                              });
+                            </script>
+                            <h6>Hasta:</h6>
+                            <div class="col-12 text-center">
+                              <input id="escuHasta1" type="range" class="form-range" value="0" min="0" max="1000000" min="0" max="1000000" step="10">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="escu2" id="escuHasta2" step="10"> k
+                            </div>
+                            <script>
+                              document.getElementById('escuHasta1').addEventListener('input', function () {
+                                document.getElementById('escuHasta2').value = this.value;
+                              });
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Estrellas -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hEstr">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cEstr" aria-expanded="false" aria-controls="cEstr">
+                          Estrellas
+                        </button>
+                      </h2>
+                      <div id="cEstr" class="accordion-collapse collapse" aria-labelledby="hEstr" data-bs-parent="#intervalsAccordion">
+                        <div class="accordion-body">
+                          <div class="row">
+                            <h6>Desde:</h6>
+                            <div class="col-12 text-center">
+                              <input id="estrDesde1" type="range" class="form-range" value="0" min="0" max="5" step="1">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="estr1" id="estrDesde2" min="0" max="5" step="1">
+                            </div>
+                            <script>
+                              document.getElementById('estrDesde1').addEventListener('input', function () {
+                                document.getElementById('estrDesde2').value = this.value;
+                              });
+                            </script>
+                            <h6>Hasta:</h6>
+                            <div class="col-12 text-center">
+                              <input id="estrHasta1" type="range" class="form-range" value="0" min="0" max="5" step="1">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="estr2" id="estrHasta2" min="0" max="5" step="1">
+                            </div>
+                            <script>
+                              document.getElementById('estrHasta1').addEventListener('input', function () {
+                                document.getElementById('estrHasta2').value = this.value;
+                              });
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Visitas -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hVisitas">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cVisitas" aria-expanded="false" aria-controls="cVisitas">
+                          Visitas
+                        </button>
+                      </h2>
+                      <div id="cVisitas" class="accordion-collapse collapse" aria-labelledby="hVisitas"
+                        data-bs-parent="#intervalsAccordion">
+                        <div class="accordion-body">
+                          <div class="row">
+                            <h6>Desde:</h6>
+                            <div class="col-12 text-center">
+                              <input id="visitDesde1" type="range" class="form-range" value="0" min="0" max="1000000" step="10">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="visit1" id="visitDesde2" min="0" max="1000000" step="10">
+                            </div>
+                            <script>
+                              document.getElementById('visitDesde1').addEventListener('input', function () {
+                                document.getElementById('visitDesde2').value = this.value;
+                              });
+                            </script>
+                            <h6>Hasta:</h6>
+                            <div class="col-12 text-center">
+                              <input id="visitHasta1" type="range" class="form-range" value="0" min="0" max="1000000" step="10">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="visit2" id="visitHasta2" min="0" max="1000000" step="10">
+                            </div>
+                            <script>
+                              document.getElementById('visitHasta1').addEventListener('input', function () {
+                                document.getElementById('visitHasta2').value = this.value;
+                              });
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Likes -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hLikes">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cLikes" aria-expanded="false" aria-controls="cLikes">
+                          Likes
+                        </button>
+                      </h2>
+                      <div id="cLikes" class="accordion-collapse collapse" aria-labelledby="hLikes"
+                        data-bs-parent="#intervalsAccordion">
+                        <div class="accordion-body">
+                          <div class="row">
+                            <h6>Desde:</h6>
+                            <div class="col-12 text-center">
+                              <input id="likeDesde1" type="range" class="form-range" value="0" min="0" max="1000" step="10">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="like1" id="likeDesde2" min="0" max="1000" step="10">
+                            </div>
+                            <script>
+                              document.getElementById('likeDesde1').addEventListener('input', function () {
+                                document.getElementById('likeDesde2').value = this.value;
+                              });
+                            </script>
+                            <h6>Hasta:</h6>
+                            <div class="col-12 text-center">
+                              <input id="likeHasta1" type="range" class="form-range" value="0" min="0" max="1000" step="10">
+                            </div>
+                            <div class="col-6 col-md-12 text-center mx-auto">
+                              <input type="number" name="like2" id="likeHasta2" min="0" max="1000" step="10">
+                            </div>
+                            <script>
+                              document.getElementById('likeHasta1').addEventListener('input', function () {
+                                document.getElementById('likeHasta2').value = this.value;
+                              });
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <br> <h2 class="menu-h2 mb-3">Categorias</h2>
+                  <div class="accordion" id="categoriesAccordion">
+
+                    <!-- Tipo de Álbum -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hTipo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cTipo" aria-expanded="false" aria-controls="cTipo">
+                          Tipo de Álbum
+                        </button>
+                      </h2>
+                      <div id="cTipo" class="accordion-collapse collapse" aria-labelledby="hTipo"
+                        data-bs-parent="#categoriesAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="estudio"><label for="estudio" class="form-check-label">Estudio</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="demo"><label for="demo" class="form-check-label">Demo</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="ep"><label for="ep" class="form-check-label">EP</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="recopilatorio"><label for="recopilatorio" class="form-check-label">Recopilatorio</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="boxset"><label for="boxset" class="form-check-label">Boxset</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="envivo"><label for="envivo" class="form-check-label">En Vivo</label></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Géneros -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hGeneros">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cGeneros" aria-expanded="false" aria-controls="cGeneros">
+                          Géneros
+                        </button>
+                      </h2>
+                      <div id="cGeneros" class="accordion-collapse collapse" aria-labelledby="hGeneros"
+                        data-bs-parent="#categoriesAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Alternative"><label for="Alternative" class="form-check-label">Alternative Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Black"><label for="Black" class="form-check-label">Black Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Crossover-Thrash"><label for="Crossover-Thrash" class="form-check-label">Crossover Thrash Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Deathcore"><label for="Deathcore" class="form-check-label">Deathcore</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Death"><label for="Death" class="form-check-label">Death Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Djent"><label for="Djent" class="form-check-label">Djent</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Doom"><label for="Doom" class="form-check-label">Doom Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Folk"><label for="Folk" class="form-check-label">Folk Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Glam"><label for="Glam" class="form-check-label">Glam Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Groove"><label for="Groove" class="form-check-label">Groove Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Gothic"><label for="Gothic" class="form-check-label">Gothic Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Grindcore"><label for="Grindcore" class="form-check-label">Grindcore</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Heavy"><label for="Heavy" class="form-check-label">Heavy Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Industrial"><label for="Industrial" class="form-check-label">Industrial Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Melodic-Death"><label for="Melodic-Death" class="form-check-label">Melodic Death Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Metalcore"><label for="Metalcore" class="form-check-label">Metalcore</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Nu"><label for="Nu" class="form-check-label">Nu Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="NWOBHM"><label for="NWOBHM" class="form-check-label">NWOBHM</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Power"><label for="Power" class="form-check-label">Power Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Progressive"><label for="Progressive" class="form-check-label">Progressive Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Sludge"><label for="Sludge" class="form-check-label">Sludge Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Speed"><label for="Speed" class="form-check-label">Speed Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Stoner"><label for="Stoner" class="form-check-label">Stoner Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Symphonic"><label for="Symphonic" class="form-check-label">Symphonic Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Technical-Death"><label for="Technical-Death" class="form-check-label">Technical Death Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Thrash"><label for="Thrash" class="form-check-label">Thrash Metal</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="tipo" id="Viking"><label for="Viking" class="form-check-label">Viking Metal</label></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Paises -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hPais">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cPais" aria-expanded="false" aria-controls="cPais">
+                          Paises
+                        </button>
+                      </h2>
+                      <div id="cPais" class="accordion-collapse collapse" aria-labelledby="hPais"
+                        data-bs-parent="#categoriesAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Alemania"><label for="Alemania" class="form-check-label">Alemania</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Australia"><label for="Australia" class="form-check-label">Australia</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Belgica"><label for="Belgica" class="form-check-label">Belgica</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Brasil"><label for="Brasil" class="form-check-label">Brasil</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Canada"><label for="Canada" class="form-check-label">Canadá</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Dinamarca"><label for="Dinamarca" class="form-check-label">Dinamarca</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Espana"><label for="Espana" class="form-check-label">España</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="EEUU"><label for="EEUU" class="form-check-label">Estados Unidos</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Finlandia"><label for="Finlandia" class="form-check-label">Finlandia</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Francia"><label for="Francia" class="form-check-label">Francia</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Grecia"><label for="Grecia" class="form-check-label">Grecia</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Italia"><label for="Italia" class="form-check-label">Italia</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Japón"><label for="Japón" class="form-check-label">Japón</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Noruega"><label for="Noruega" class="form-check-label">Noruega</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Paises Bajos"><label for="Paises Bajos" class="form-check-label">Paises Bajos</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Polonia"><label for="Polonia" class="form-check-label">Polonia</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="UK"><label for="UK" class="form-check-label">Reino Unido</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Rusia"><label for="Rusia" class="form-check-label">Rusia</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Suecia"><label for="Suecia" class="form-check-label">Suecia</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Suiza"><label for="Suiza" class="form-check-label">Suiza</label></div>
+                          <div class="form-check"><input type="checkbox" class="form-check-input" name="pais" id="Ucrania"><label for="Ucrania" class="form-check-label">Ucrania</label></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <br> <h2 class="menu-h2 mb-3">Reducir por</h2>
+                  <div class="accordion" id="reductionsAccordion">
+
+                    <!-- Banda -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hBanda">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cBanda" aria-expanded="false" aria-controls="cBanda">
+                          Banda
+                        </button>
+                      </h2>
+                      <div id="cBanda" class="accordion-collapse collapse" aria-labelledby="hBanda"
+                        data-bs-parent="#reductionsAccordion">
+                        <div class="accordion-body">
+                          <div class="row justify-content-center">
+                            <div class="col-10 col-md-12">
+                              <input type="text" class="form-control" name="band" id="band" list="listaBandas" style="width: 100%">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Discográfica -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hDisc">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cDisc" aria-expanded="false" aria-controls="cDisc">
+                          Discográfica
+                        </button>
+                      </h2>
+                      <div id="cDisc" class="accordion-collapse collapse" aria-labelledby="hDisc"
+                        data-bs-parent="#reductionsAccordion">
+                        <div class="accordion-body">
+                          <div class="row justify-content-center">
+                            <div class="col-10 col-md-12">
+                              <input type="text" class="form-control" name="disc" id="disc" list="listaDisc" style="width: 100%">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Estudios de Grabación -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hEstud">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cEstud" aria-expanded="false" aria-controls="cEstud">
+                          Esudios de Grabación
+                        </button>
+                      </h2>
+                      <div id="cEstud" class="accordion-collapse collapse" aria-labelledby="hEstud"
+                        data-bs-parent="#reductionsAccordion">
+                        <div class="accordion-body">
+                          <div class="row justify-content-center">
+                            <div class="col-10 col-md-12">
+                              <input type="text" class="form-control" name="estud" id="estud" list="listaEstud" style="width: 100%">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Músicos -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hMus">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cMus" aria-expanded="false" aria-controls="cMus">
+                          Músicos
+                        </button>
+                      </h2>
+                      <div id="cMus" class="accordion-collapse collapse" aria-labelledby="hMus"
+                        data-bs-parent="#reductionsAccordion">
+                        <div class="accordion-body">
+                          <div class="row justify-content-center">
+                            <div class="col-10 col-md-12">
+                              <input type="text" class="form-control" name="mus" id="mus" list="listaMus" style="width: 100%">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Productores -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hProd">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cProd" aria-expanded="false" aria-controls="cProd">
+                          Productores
+                        </button>
+                      </h2>
+                      <div id="cProd" class="accordion-collapse collapse" aria-labelledby="hProd"
+                        data-bs-parent="#reductionsAccordion">
+                        <div class="accordion-body">
+                          <div class="row justify-content-center">
+                            <div class="col-10 col-md-12">
+                              <input type="text" class="form-control" name="prod" id="prod" list="listaProd" style="width: 100%">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Temas de Letra -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="hLetra">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#cLetra" aria-expanded="false" aria-controls="cLetra">
+                          Temas de Letra
+                        </button>
+                      </h2>
+                      <div id="cLetra" class="accordion-collapse collapse" aria-labelledby="hLetra"
+                        data-bs-parent="#reductionsAccordion">
+                        <div class="accordion-body">
+                          <div class="row justify-content-center">
+                            <div class="col-10 col-md-12">
+                              <input type="text" class="form-control" name="letra" id="letra" list="listaLetra" style="width: 100%">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Orden -->
+              <section class="mini-section">
+                <div class="container">
+                  <div class="section-title">
+                    <h2>Orden</h2>
+                    <p>Ordenar por:</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12 mt-1">
+                      <select class="form-select" aria-label="Default select example" name="critTipo" id="order">
+                        <option value="0"></option>
+                        <option value="Alfabetico">Alfabético</option>
+                        <option value="Puntuacion">Puntuación</option>
+                        <option value="Escuchas">Escuchas</option>
+                        <option value="Visitas">Visitas</option>
+                        <option value="Likes">Likes</option>
+                      </select>
+                    </div>
+                    <div class="col-6 col-md-12 mt-1">
+                      <select class="form-select" aria-label="multiple select example" name="orderDirec" id="orderDirec">
+                        <option value="_Asc">Ascendente</option>
+                        <option value="_Desc">Descendente</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+
+            <!-- VISUAL -->
+            <div class="col-12 col-md-8 col-lg-9">
+
+              <!-- Imagen, Nombre, Banda, Tipo Álbum, Fecha, Generos-Estrellas -->
+
+              <!-- Elementos -->
+              <section id="portfolio" class="portfolio mini-section">
+                <div class="container estado1b" data-aos="fade-up" data-aos-delay="300">
+                  <div class="section-title">
+                    <h2>Elementos</h2>
+                    <p>Lista de:</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                      <ul id="portfolio-flters">
+                        <li data-filter=".filter-bandas2" class="filterButton filterBandas" id="filterBandas2">Bandas</li>
+                        <li data-filter=".filter-albumes2" class="filterButton filterAlbumes" id="filterAlbumes2">Álbumes</li> <!-- filter-active -->
+                        <!-- <li data-filter=".filter-canciones">Canciones</li> -->
+                        <li data-filter=".filter-discograf2" class="filterButton filterDiscogs" id="filterDiscogs2">Discográficas</li>
+                       <!--  <li data-filter=".filter-esttudios">Estudios de Grabación</li>
+                        <li data-filter=".filter-generos">Géneros</li>
+                        <li data-filter=".filter-paises">Paises</li>
+                        <li data-filter=".filter-">Años</li> -->
+                        <li data-filter=".filter-musicos2" class="filterButton filterMusicos" id="filterMusicos2">Músicos</li>
+                        <!-- <li data-filter=".filter-">Productores</li>
+                        <li data-filter=".filter-">Temas de Letra</li> -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Botón Buscar -->
+                <div class="row mb-4" data-aos="fade-up" data-aos-delay="400">
+                  <div class="col text-center more">
+                    <button type="button" class="btn btn-primary" id="searchButton">Buscar</button>
+                  </div>
+                </div>
+
+                <div class="row justify-content-center align-items-end mt-5 d-none" id="noDataFound">
+                  <div class="col-auto"><img src="./imagenes/basico/noDataFoundGrey.png" alt="" style="width: 120px"></div>
+                  <div class="col-auto pb-3"><h2 class="text-center">No se han encontrado resultados</h2></div>
+                </div>
+
+                <!-- Resultados -->
+                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-4 mt-3 mx-2" id="resultContainer" data-aos="fade-up" data-aos-delay="500"></div>
+                
+                <!-- Loading -->
+                <div id="spinner" class="row justify-content-center my-4 d-none">
+                  <div class="col-auto">
+                    <div class="spinner-border text-red" style="width: 3rem; height: 3rem;" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6"> <!-- col-lg-3 col-md-6 -->
+            <div class="footer-info">
+              <h1 class="logo me-auto me-lg-0 footer-h1">
+                <a href="index.html">
+                  <img src="imagenes/basico/logo_MetaList-2.png" alt="logo_MetaList 2" width="200px">
+                </a>
+              </h1>
+              <p>
+                Calle de la Fuensanta, 3 <br>
+                16002, Cuenca, España<br><br>
+                <strong>Teléfono:</strong> +32 969 304 288<br>
+                <strong>Email:</strong> <a href="mailto:admin@metalist.es" class="inv-a">admin@metalist.es</a><br>
+              </p> <br>
+              <p>
+                <a href="privacidad.html" class="inv-a fw-bold">Políticas de Privacidad y Cookies</a><br>
+                <a href="legal.html" class="inv-a fw-bold">Políticas Legales y Términos de Uso</a><br>
+              </p> <br>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/?lang=es" class="twitter"><span class="d-none">.</span><div><i class="bx bxl-twitter"></div></i></a>
+                <a href="https://www.facebook.com/" class="facebook"><span class="d-none">.</span><div><i class="bx bxl-facebook"></i></div></a>
+                <a href="https://www.instagram.com/" class="instagram"><span class="d-none">.</span><div><i class="bx bxl-instagram"></i></div></a>
+                <a href="https://github.com/MariusTNTX?tab=repositories" class="google-plus"><span class="d-none">.</span><div><i class="bx bxl-github"></i></div></a>
+                <a href="https://es.linkedin.com/" class="linkedin"><span class="d-none">.</span><div><i class="bx bxl-linkedin"></i></div></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 footer-links"> <!-- col-lg-2 col-md-6 footer-links -->
+            <h4>Nuestros Servicios</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="./buscadorAvanzado.html?list=bands">Búsquedas Avanzadas</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 footer-links">
+            <h4>Nuestras Secciones</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#portfolio">Noticias</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#testimonials">Sección "Today"</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#team">Incorporaciones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Sobre Nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#clients">Lista de Fuentes</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#counts">Estadísticas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#cta">Donaciones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contacto</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MetaList</span></strong> | Todos los derechos reservados
+      </div>
+      <div class="credits">
+        Diseñado por <a href="https://github.com/MariusTNTX?tab=repositories">Mario Molina</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Alerts -->
+  <div id="alertTemplate"></div>
+
+  <div id="preloader"></div>
+  <a href="buscadorAvanzado.html#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="js/api.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/buscador/newAlbumCard.js"></script>
+  <script src="js/buscador/newBandCard.js"></script>
+  <script src="js/buscador/newLabelCard.js"></script>
+  <script src="js/buscador/newMusicianCard.js"></script>
+  <script src="js/buscador/newFilter.js"></script>
+  <script src="js/buscador/buscador.js"></script>
+
+</body>
+
+</html>

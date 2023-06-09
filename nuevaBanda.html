@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MetaList - Nueva Banda</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="imagenes/basico/favicon MetaList.png" rel="icon">
+  <link href="imagenes/basico/appletouch2 MetaList.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+
+  <!-- Captcha -->
+  <script async src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+
+  <!-- =======================================================
+  * Template Name: Gp - v4.9.1
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0">
+        <a href="index.html">
+          <img src="imagenes/basico/logo_MetaList.png" alt="logo_MetaList">
+        </a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Bandas</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=bands">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomBand" href="#">Banda Aleatoria</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Álbumes</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=albums">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomAlbum" href="#">Álbum Aleatorio</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Discográficas</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=labels">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomLabel" href="#">Discográfica Aleatoria</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Músicos</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=musicians">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomMusician" href="#">Músico Aleatorio</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="dropdown login me-2" id="dropdownLogin">
+        <button type="button" class="btn text-white dropdown-toggle py-2 px-4" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+          <i class="bi bi-person-fill"></i>
+          <span class="d-none d-sm-inline-block" id="userName">Login</span>
+        </button>
+        <form action="" method="get" class="dropdown-menu dropdown-menu-end p-4 w-50" id="loginForm">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="email@ejemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="loginPass" class="form-label">Contraseña</label>
+            <div class="position-relative">
+              <input type="password" class="form-control" id="loginPass" placeholder="Contraseña" required>
+              <i id="loginPassEye" class="bi bi-eye-fill position-absolute top-50 end-0 translate-middle-y me-2"></i>
+            </div>
+          </div>
+          <div class="text-center mb-2"><button type="submit" class="btn btn-primary" id="loginButton">Iniciar Sesión</button></div>
+          <div class="mb-3 text-center">
+            <a href="#" id="forgPass">He olvidado mi contraseña</a>
+          </div>
+          <hr class="mt-4">
+          <div id="regist" class="text-center">
+            <label for="regist" class="form-label">¿No tienes cuenta?</label>
+            <div><a href="./registro.html">Regístrate</a></div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Nueva Banda</h2>
+          <ol>
+            <li><a href="administracion.html">Administración</a></li>
+            <li>Nueva Banda</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container" data-aos="fade-up">
+        <div class="reg-container row justify-content-center">
+
+          <form action="" method="post" class="container">
+            <!-- I N F O   B Á S I C A -->
+            <div class="row">
+
+              <!-- Busquedas y Propuestas -->
+              <div class="col-0 col-sm-2 col-md-2 col-lg-3"></div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <!-- Nombre -->
+                <div class="form-floating">
+                  <input type="text" class="form-control shadow-sm" list="nombreList" id="nombreBan" name="nombreBan" placeholder=".">
+                  <label for="nombreBan">Nombre de la Banda</label>
+                </div>
+              </div>
+              <!-- Búsqueda -->
+              <div class="col-12 col-sm-2 mb-3 more pt-2 text-center text-sm-start">
+                <button class="btn btn-primary shadow-sm" id="buscarBan" disabled>Buscar</button>
+              </div>
+              <!-- Propuesta -->
+              <div class="col-12 col-md-4 mb-3 more pt-2 text-center text-md-end">
+                <button class="btn btn-primary shadow-sm" id="btnGenProp" disabled data-bs-toggle="modal" data-bs-target="#banPropModal">Generar Propuesta</button>
+              </div>
+
+              <hr class="mt-4 mb-5">
+        
+              <div class="col-12 col-md-6">
+                <!-- País -->
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control shadow-sm" list="paisList" id="paisBan" name="paisBan" placeholder=".">
+                  <label for="paisBan">País</label>
+                </div>
+                <!-- Origen -->
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control shadow-sm" list="origenList" id="origenBan" name="origenBan" placeholder=".">
+                  <label for="origenBan">Dirección de Origen</label>
+                </div>
+                <!-- Descripción -->
+                <div class="form-floating mb-3">
+                  <textarea class="form-control shadow-sm" placeholder="." id="descripcBan" name="descripcBan"
+                    style="height: 206px"></textarea>
+                  <label for="descripcBan">Descripción</label>
+                </div>
+              </div>
+        
+              <div class="col-12 col-md-6">
+                <!-- Estatus -->
+                <div class="mb-3">
+                  <select class="form-select shadow-sm tipoAlb py-3" id="estatusBan" name="estatusBan" aria-label="Default select example">
+                    <option disabled selected>-- (Estatus Actual) --</option>
+                    <option value="En Activo">En Activo</option>
+                    <option value="Disueltos">Disueltos</option>
+                    <option value="En Hiato">En Hiato</option>
+                  </select>
+                </div>
+                <!-- Imagen -->
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control shadow-sm" id="imagenBan" name="imagenBan" placeholder=".">
+                  <label for="imagenBan">Imagen</label>
+                </div>
+                <!-- Escuchas -->
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control shadow-sm" id="escuchasBan" name="escuchasBan" placeholder="." min="0">
+                  <label for="escuchasBan">Escuchas Spotify</label>
+                </div>
+                <!-- Link Spotify -->
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control shadow-sm" id="spotifyBan" name="spotifyBan" placeholder=".">
+                  <label for="spotifyBan">Enlace Spotify</label>
+                </div>
+                <!-- Link Web -->
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control shadow-sm" id="webBan" name="webBan" placeholder=".">
+                  <label for="webBan">Enlace Página Web</label>
+                </div>
+              </div>
+            </div>
+        
+            <!-- T A B L A S -->
+            <div class="row">
+              <!-- Etapas -->
+              <div class="col-12 col-md-7 col-xl-4 my-2">
+                <div class="accordion accordion-flush shadow" id="accordionFlushEtapas">
+                  <div class="accordion-item border border-dark border-opacity-25 rounded">
+                    <h2 class="accordion-header" id="flush-etapasBan">
+                      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Etapas
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-etapasBan"
+                      data-bs-parent="#accordionFlushEtapas">
+                      <div class="accordion-body">
+                        <table class="table table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col"><button type="button" id="addEtapaBan" class="btn btn-success addEtapaBan anadir-fila">+</button></th>
+                              <th scope="col">Año Inicio</th>
+                              <th scope="col">Año Fin</th>
+                              <th scope="col">Tipo</th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-group-divider" id="tbodyEtapas">
+                            <tr>
+                              <th><button type="button" class="btn btn-danger eliminar eliminar-fila">x</button></th>
+                              <td><input type="number" class="form-control anioInicBan" name="anioInicEtaBan[]" min="1965" max="2023"></td>
+                              <td><input type="number" class="form-control anioFinBan" name="anioFin[]" min="1965" max="2023"></td>
+                              <td><select class="form-select tipoEtaBan" name="tipoEtaBan[]" aria-label="Default select example">
+                                  <option value="En Activo">Activo</option>
+                                  <option value="En Hiato">Hiato</option>
+                                </select>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Temas de Letra -->
+              <div class="col-12 col-md-5 col-xl-3 my-2">
+                <div class="accordion accordion-flush shadow" id="accordionFlushTemas">
+                  <div class="accordion-item border border-dark border-opacity-25 rounded">
+                    <h2 class="accordion-header" id="flush-temasBan">
+                      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Temas de Letra
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-temasBan"
+                      data-bs-parent="#accordionFlushTemas">
+                      <div class="accordion-body">
+                        <table class="table table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col"><button type="button" id="addTemaBan" class="btn btn-success addTemaBan anadir-fila">+</button></th>
+                              <th scope="col">Tema de Letra</th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-group-divider" id="tbodyTemas">
+                            <tr>
+                              <th><button type="button" class="btn btn-danger eliminar eliminar-fila">x</button></th>
+                              <td><input type="text" class="form-control temaLetra" name="temaLetra[]"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Estudios de Grabación -->
+              <div class="col-12 col-xl-5 my-2">
+                <div class="accordion accordion-flush shadow" id="accordionFlushEstudios">
+                  <div class="accordion-item border border-dark border-opacity-25 rounded">
+                    <h2 class="accordion-header" id="flush-estudiosBan">
+                      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        Estudios de Grabación
+                      </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-estudiosBan"
+                      data-bs-parent="#accordionFlushEstudios">
+                      <div class="accordion-body">
+                        <table class="table table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col"><button type="button" id="addEstudioBan" class="btn btn-success addEstudioBan anadir-fila">+</button></th>
+                              <th scope="col">Estudio</th>
+                              <th scope="col">País</th>
+                              <th scope="col">Dirección</th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-group-divider" id="tbodyEstudios"></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Álbumes -->
+              <div class="col-12 my-2">
+                <div class="accordion accordion-flush shadow" id="accordionFlushAlbumes">
+                  <div class="accordion-item border border-dark border-opacity-25 rounded">
+                    <h2 class="accordion-header" id="flush-albumesBan">
+                      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        Álbumes
+                      </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-albumesBan" data-bs-parent="#accordionFlushAlbumes">
+                      <div class="accordion-body row">
+                        <div class="col-12">
+                          <div class="row" id="tbodyAlbumes"></div>
+                        </div>
+                        <div class="col-12 text-center mb-2">
+                          <button type="button" id="addAlbBan" class="btn btn-success w-50 addAlbBan anadirAlb anadir-etiqueta shadow-sm">Añadir Álbum</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Músicos -->
+              <div class="col-12 my-2">
+                <div class="accordion accordion-flush shadow" id="accordionFlushMusicos">
+                  <div class="accordion-item border border-dark border-opacity-25 rounded">
+                    <h2 class="accordion-header" id="flush-musicosBan">
+                      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Músicos
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-musicosBan"
+                      data-bs-parent="#accordionFlushMusicos">
+                      <div class="accordion-body row">
+                        <div class="col-12">
+                          <div class="row" id="tbodyMusicos"></div>
+                        </div>
+                        <div class="col-12 text-center mb-2">
+                          <button type="button" id="addMusicoBan" class="btn btn-success w-50 addMusicoBan anadirMus anadir-etiqueta shadow-sm">Añadir Músico</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Discográficas -->
+              <div class="col-12 my-2">
+                <div class="accordion accordion-flush shadow" id="accordionFlushDiscograficas">
+                  <div class="accordion-item border border-dark border-opacity-25 rounded">
+                    <h2 class="accordion-header" id="flush-discograficasBan">
+                      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        Discográficas
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-discograficasBan"
+                      data-bs-parent="#accordionFlushDiscograficas">
+                      <div class="accordion-body row">
+                        <div class="col-12">
+                          <div class="row" id="tbodyDiscograficas"></div>
+                        </div>
+                        <div class="col-12 text-center mb-2">
+                          <button type="button" id="addDiscogBan" class="btn btn-success w-50 addDiscogBan anadirDisc anadir-etiqueta shadow-sm">Añadir Discográfica</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row py-4 px-3 more">
+              <button type="button" id="btnGuardar" class="btn btn-primary shadow">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Propuesta de Banda -->
+    <div class="modal fade" id="banPropModal" tabindex="-1" aria-labelledby="banPropModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="banPropModalLabel">Propuesta de Banda</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Enlace a Metallum -->
+            <h3 class="text-center">Enlaces:</h3>
+            <h5 class="text-center mb-4" id="enlacePropBan"></h5>
+            <!-- Textarea -->
+            <div class="text-center">
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="." id="banPropText" name="banPropText"
+                  style="height: 206px"></textarea>
+                <label for="banPropText">Contenido HTML</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <div class="more pt-0"><button type="button" id="btnBanProp" class="btn btn-primary">Cargar Propuesta</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Propuesta de Álbum -->
+    <div class="modal fade" id="albPropModal" tabindex="-1" aria-labelledby="albPropModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="albPropModalLabel">Propuesta de Álbum</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Enlace a Metallum -->
+            <h3 class="text-center">Enlaces:</h3>
+            <h5 class="text-center mb-4" id="enlacePropAlb"></h5>
+            <div class="d-none" id="idPropAlb"></div>
+            <!-- Textarea -->
+            <div class="text-center">
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="." id="albPropText" name="albPropText"
+                  style="height: 206px"></textarea>
+                <label for="albPropText">Contenido HTML</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <div class="more pt-0"><button type="button" id="btnAlbProp" class="btn btn-primary">Cargar Propuesta</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Propuesta de Músico -->
+    <div class="modal fade" id="musPropModal" tabindex="-1" aria-labelledby="musPropModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="musPropModalLabel">Propuesta de Músico</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Enlace a Metallum -->
+            <h3 class="text-center">Enlaces:</h3>
+            <h5 class="text-center mb-4" id="enlacePropMus"></h5>
+            <div class="d-none" id="idPropMus"></div>
+            <!-- Textarea -->
+            <div class="text-center">
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="." id="musPropText" name="musPropText"
+                  style="height: 206px"></textarea>
+                <label for="musPropText">Contenido HTML</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <div class="more pt-0"><button type="button" id="btnMusProp" class="btn btn-primary">Cargar Propuesta</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Propuesta de Discográfica -->
+    <div class="modal fade" id="discPropModal" tabindex="-1" aria-labelledby="discPropModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="discPropModalLabel">Propuesta de Discográfica</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Enlace a Metallum -->
+            <h3 class="text-center">Enlaces:</h3>
+            <h5 class="text-center mb-4" id="enlacePropDisc"></h5>
+            <div class="d-none" id="idPropDisc"></div>
+            <!-- Textarea -->
+            <div class="text-center">
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="." id="discPropText" name="discPropText" style="height: 206px"></textarea>
+                <label for="discPropText">Contenido HTML</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <div class="more pt-0"><button type="button" id="btnDiscProp" class="btn btn-primary">Cargar Propuesta</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extracción de Estudios -->
+    <div class="modal fade" id="estExtrModal" tabindex="-1" aria-labelledby="estExtrModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="estExtrModalLabel">Extracción de Estudios</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- ID -->
+            <h3 class="text-center">Texto:</h3>
+            <div class="d-none" id="idExtrEst"></div>
+            <!-- Textarea -->
+            <div class="text-center">
+              <!-- <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="." id="estExtrText" name="estExtrText" style="height: 206px"></textarea>
+                <label for="estExtrText">Contenido HTML</label>
+              </div> -->
+              <p id="estExtrText" class="my-4 p-2 border rounded"></p>
+            </div>
+            <!-- Añadir Estudio -->
+            <div class="row justify-content-center">
+              <div class="col-auto my-1">
+                <input type="text" class="form-control" id="estExtrInput" placeholder="Nombre de Estudio" style="height: 44px">
+              </div>
+              <div class="col-auto my-1">
+                <input type="text" class="form-control" id="paisExtrInput" placeholder="País" style="height: 44px">
+              </div>
+              <div class="col-auto my-1">
+                <input type="text" class="form-control" id="direcExtrInput" placeholder="Dirección" style="height: 44px">
+              </div>
+              <div class="col-12 mt-3 mb-1">
+                <div class="more text-center pt-0"><button type="button" id="btnEstExtr" class="btn btn-primary">Añadir Estudio</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6"> <!-- col-lg-3 col-md-6 -->
+            <div class="footer-info">
+              <h1 class="logo me-auto me-lg-0 footer-h1">
+                <a href="index.html">
+                  <img src="imagenes/basico/logo_MetaList-2.png" alt="logo_MetaList 2" width="200px">
+                </a>
+              </h1>
+              <p>
+                Calle de la Fuensanta, 3 <br>
+                16002, Cuenca, España<br><br>
+                <strong>Teléfono:</strong> +32 969 304 288<br>
+                <strong>Email:</strong> <a href="mailto:admin@metalist.es" class="inv-a">admin@metalist.es</a><br>
+              </p> <br>
+              <p>
+                <a href="privacidad.html" class="inv-a fw-bold">Políticas de Privacidad y Cookies</a><br>
+                <a href="legal.html" class="inv-a fw-bold">Políticas Legales y Términos de Uso</a><br>
+              </p> <br>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/?lang=es" class="twitter"><span class="d-none">.</span><div><i class="bx bxl-twitter"></div></i></a>
+                <a href="https://www.facebook.com/" class="facebook"><span class="d-none">.</span><div><i class="bx bxl-facebook"></i></div></a>
+                <a href="https://www.instagram.com/" class="instagram"><span class="d-none">.</span><div><i class="bx bxl-instagram"></i></div></a>
+                <a href="https://github.com/MariusTNTX?tab=repositories" class="google-plus"><span class="d-none">.</span><div><i class="bx bxl-github"></i></div></a>
+                <a href="https://es.linkedin.com/" class="linkedin"><span class="d-none">.</span><div><i class="bx bxl-linkedin"></i></div></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 footer-links"> <!-- col-lg-2 col-md-6 footer-links -->
+            <h4>Nuestros Servicios</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="./buscadorAvanzado.html?list=bands">Búsquedas Avanzadas</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 footer-links">
+            <h4>Nuestras Secciones</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#portfolio">Noticias</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#testimonials">Sección "Today"</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#team">Incorporaciones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Sobre Nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#clients">Lista de Fuentes</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#counts">Estadísticas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#cta">Donaciones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contacto</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MetaList</span></strong> | Todos los derechos reservados
+      </div>
+      <div class="credits">
+        Diseñado por <a href="https://github.com/MariusTNTX?tab=repositories">Mario Molina</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Alerts -->
+  <div id="alertTemplate"></div>
+
+  <div id="preloader"></div>
+  <a href="nuevaBanda.html#" class="back-to-top d-flex align-items-center justify-content-center"><span class="d-none">.</span><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- NuevaBanda JS File -->
+  <script src="js/util.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/nuevaBanda/propuestaBanda.js"></script>
+  <script src="js/nuevaBanda/eventosNuevaBanda.js"></script>
+  <script src="js/nuevaBanda/propuestaAlbum.js"></script>
+  <script src="js/nuevaBanda/newAlbum.js"></script>
+  <script src="js/nuevaBanda/newMusico.js"></script>
+  <script src="js/nuevaBanda/newDiscografica.js"></script>
+  <!-- <script src="js/eliminame.js"></script> -->
+
+</body>
+
+</html>

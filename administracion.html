@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MetaList - Administración</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="imagenes/basico/favicon MetaList.png" rel="icon">
+  <link href="imagenes/basico/appletouch2 MetaList.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+
+  <!-- Captcha -->
+  <script async src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+
+  <!-- =======================================================
+  * Template Name: Gp - v4.9.1
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0">
+        <a href="index.html">
+          <img src="imagenes/basico/logo_MetaList.png" alt="Logo rojo de MetaList" title="Logo rojo de MetaList">
+        </a>
+      </h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Bandas</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=bands">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomBand" href="#">Banda Aleatoria</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Álbumes</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=albums">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomAlbum" href="#">Álbum Aleatorio</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Discográficas</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=labels">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomLabel" href="#">Discográfica Aleatoria</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="px-2 px-lg-1 px-xl-2"><span>Músicos</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="buscadorAvanzado.html?list=musicians">Buscador Avanzado</a></li>
+              <li><a class="randomElement" id="randomMusician" href="#">Músico Aleatorio</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="dropdown login me-2" id="dropdownLogin">
+        <button type="button" class="btn text-white dropdown-toggle py-2 px-4" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+          <i class="bi bi-person-fill"></i>
+          <span class="d-none d-sm-inline-block" id="userName">Login</span>
+        </button>
+        <form action="" method="get" class="dropdown-menu dropdown-menu-end p-4 w-50" id="loginForm">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="email@ejemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="loginPass" class="form-label">Contraseña</label>
+            <div class="position-relative">
+              <input type="password" class="form-control" id="loginPass" placeholder="Contraseña" required>
+              <i id="loginPassEye" class="bi bi-eye-fill position-absolute top-50 end-0 translate-middle-y me-2"></i>
+            </div>
+          </div>
+          <div class="text-center mb-2"><button type="submit" class="btn btn-primary" id="loginButton">Iniciar Sesión</button></div>
+          <div class="mb-3 text-center">
+            <a href="#" id="forgPass">He olvidado mi contraseña</a>
+          </div>
+          <hr class="mt-4">
+          <div id="regist" class="text-center">
+            <label for="regist" class="form-label">¿No tienes cuenta?</label>
+            <div><a href="./registro.html">Regístrate</a></div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>
+            Administración
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill align-middle pb-1 superAdmin" viewBox="0 0 16 16">
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+            </svg>
+          </h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Administración</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+    
+    <section class="inner-page">
+      <!-- GESTIÓN DE CONTENIDO -->
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2 class="lh-base">Insertar, Actulaizar y Eliminar Elementos</h2>
+          <p><i class="bi bi-pencil-square me-2 align-middle"></i>Gestión de Contenido:</p>
+        </div>
+        <div class="row justify-content-evenly mb-5">
+
+          <!-- Bandas -->
+          <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-4 rounded">
+            <div class="mx-2 shadow-lg">
+              <!-- Header -->
+              <div class="row rounded-top bg-dark text-white pt-2">
+                <!-- Imagen y Título -->
+                <div class="col-12">
+                  <h2><i class="bi bi-people-fill me-2 align-middle"></i>Bandas</h2>
+                </div>
+              </div>
+              <!-- Body -->
+              <div class="row justify-content-center align-items-center rounded-bottom bg-white py-2">
+                <!-- Insertar/Actualizar -->
+                <div class="col-12 my-2 text-center">
+                  <a href="./nuevaBanda.html">
+                    <button type="button" class="btn btn-primary text-wrap">
+                      <i class="bi bi-plus-circle-fill me-1 align-middle"></i>Insertar
+                    </button>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GESTIÓN DE BASE DE DATOS -->
+      <div class="container superAdmin" data-aos="fade-up">
+        <div class="section-title">
+          <h2 class="lh-base">Añadir, Guardar y Eliminar Datos</h2>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
+              <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698ZM14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13V4Zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698Zm0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525Z"/>
+            </svg>
+            Gestión de Base de Datos:
+          </p>
+        </div>
+        <div class="row justify-content-evenly mb-5 mx-2 mx-sm-0 bg-dark pt-5 pb-3 rounded shadow">
+          <!-- Agregar -->
+          <div class="col-10 col-sm-7 col-md-4 col-lg-3 mb-4 rounded">
+            <div class="mx-2 shadow-lg">
+              <!-- Header -->
+              <div class="row rounded-top bg-success text-white pt-2 position-relative">
+                <span class="position-absolute top-0 end-0 pt-2 mt-1 w-auto">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                  </svg>
+                </span>
+                <!-- Imagen y Título -->
+                <div class="col-12">
+                  <h2><i class="bi bi-plus-square-fill me-2 align-middle"></i>Agregar</h2>
+                </div>
+              </div>
+              <!-- Body -->
+              <div class="row justify-content-center align-items-center rounded-bottom bg-white py-2">
+                <!-- Crear BBDD -->
+                <div class="col-12 my-2 text-center">
+                  <button type="button" class="btn btn-dark text-wrap btnBD btnAddBD btnMdlConfirm" id="btnCreateDataBase" data-bs-toggle="modal" data-bs-target="#confirmacionAccion">
+                    <i class="bi bi-plus-circle-fill me-1 align-middle"></i>Crear BBDD
+                  </button>
+                </div>
+                <!-- Restore SQL -->
+                <div class="col-12 my-2 text-center">
+                  <button type="button" class="btn btn-dark text-wrap btnBD btnAddBD btnMdlRestore" id="btnRestore" data-bs-toggle="modal" data-bs-target="#modalRestore">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill-up" viewBox="0 0 16 16">
+                      <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.354-5.854 1.5 1.5a.5.5 0 0 1-.708.708L13 11.707V14.5a.5.5 0 0 1-1 0v-2.793l-.646.647a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0ZM8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1Z"/>
+                      <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7Zm6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002Zm-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905Z"/>
+                    </svg>
+                    Restore SQL
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- Guardar -->
+          <div class="col-10 col-sm-7 col-md-4 col-lg-3 mb-4 rounded">
+            <div class="mx-2 shadow-lg">
+              <!-- Header -->
+              <div class="row rounded-top bg-primary text-white pt-2 position-relative">
+                <span class="position-absolute top-0 end-0 pt-2 mt-1 w-auto">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                  </svg>
+                </span>
+                <!-- Imagen y Título -->
+                <div class="col-12">
+                  <h2><i class="bi bi-cloud-arrow-down-fill me-2 align-middle"></i>Guardar</h2>
+                </div>
+              </div>
+              <!-- Body -->
+              <div class="row justify-content-center align-items-center rounded-bottom bg-white py-2">
+                <!-- Backup SQL -->
+                <div class="col-12 my-2 text-center">
+                  <button type="button" class="btn btn-dark text-wrap btnBD btnSaveBD btnMdlConfirm" id="btnBackup" data-bs-toggle="modal" data-bs-target="#confirmacionAccion">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill-down" viewBox="0 0 16 16">
+                      <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V10.5a.5.5 0 0 0-1 0v2.793l-.646-.647a.5.5 0 0 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0ZM8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1Z"/>
+                      <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7Zm6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002Zm-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905Z"/>
+                    </svg>
+                    Backup SQL
+                  </button>
+                </div>
+                <!-- Exportar CSV -->
+                <div class="col-12 my-2 text-center">
+                  <button type="button" class="btn btn-dark text-wrap btnBD btnSaveBD btnMdlExportClean" id="btnExportCSV" data-bs-toggle="modal" data-bs-target="#modalExportar">
+                    <i class="bi bi-box-arrow-in-down me-1 align-middle"></i>Exportar CSV
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Borrar -->
+          <div class="col-10 col-sm-7 col-md-4 col-lg-3 mb-4 rounded">
+            <div class="mx-2 shadow-lg">
+              <!-- Header -->
+              <div class="row rounded-top bg-red text-white pt-2 position-relative">
+                <span class="position-absolute top-0 end-0 pt-2 mt-1 w-auto">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                  </svg>
+                </span>
+                <!-- Imagen y Título -->
+                <div class="col-12">
+                  <h2><i class="bi bi-x-square-fill me-2 align-middle"></i>Borrar</h2>
+                </div>
+              </div>
+              <!-- Body -->
+              <div class="row justify-content-center align-items-center rounded-bottom bg-white py-2">
+                <!-- Vaciar Tablas -->
+                <div class="col-12 my-2 text-center">
+                  <button type="button" class="btn btn-dark text-wrap btnBD btnRemoveBD btnMdlExportClean" id="btnDeleteTable" data-bs-toggle="modal" data-bs-target="#modalExportar">
+                    <i class="bi bi-dash-circle-fill me-1 align-middle"></i>Vaciar Tablas
+                  </button>
+                </div>
+                <!-- Eliminar BBDD -->
+                <div class="col-12 my-2 text-center">
+                  <button type="button" class="btn btn-dark text-wrap btnBD btnRemoveBD btnMdlConfirm" id="btnDropDataBase" data-bs-toggle="modal" data-bs-target="#confirmacionAccion">
+                    <i class="bi bi-trash-fill me-1 align-middle"></i>Eliminar BBDD
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6"> <!-- col-lg-3 col-md-6 -->
+            <div class="footer-info">
+              <h1 class="logo me-auto me-lg-0 footer-h1">
+                <a href="index.html">
+                  <img src="imagenes/basico/logo_MetaList-2.png" alt="logo_MetaList 2" width="200px">
+                </a>
+              </h1>
+              <p>
+                Calle de la Fuensanta, 3 <br>
+                16002, Cuenca, España<br><br>
+                <strong>Teléfono:</strong> +32 969 304 288<br>
+                <strong>Email:</strong> <a href="mailto:admin@metalist.es" class="inv-a">admin@metalist.es</a><br>
+              </p> <br>
+              <p>
+                <a href="privacidad.html" class="inv-a fw-bold">Políticas de Privacidad y Cookies</a><br>
+                <a href="legal.html" class="inv-a fw-bold">Políticas Legales y Términos de Uso</a><br>
+              </p> <br>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/?lang=es" class="twitter"><span class="d-none">.</span><div><i class="bx bxl-twitter"></div></i></a>
+                <a href="https://www.facebook.com/" class="facebook"><span class="d-none">.</span><div><i class="bx bxl-facebook"></i></div></a>
+                <a href="https://www.instagram.com/" class="instagram"><span class="d-none">.</span><div><i class="bx bxl-instagram"></i></div></a>
+                <a href="https://github.com/MariusTNTX?tab=repositories" class="google-plus"><span class="d-none">.</span><div><i class="bx bxl-github"></i></div></a>
+                <a href="https://es.linkedin.com/" class="linkedin"><span class="d-none">.</span><div><i class="bx bxl-linkedin"></i></div></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 footer-links"> <!-- col-lg-2 col-md-6 footer-links -->
+            <h4>Nuestros Servicios</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="./buscadorAvanzado.html?list=bands">Búsquedas Avanzadas</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 footer-links">
+            <h4>Nuestras Secciones</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#portfolio">Noticias</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#testimonials">Sección "Today"</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#team">Incorporaciones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Sobre Nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#clients">Lista de Fuentes</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#counts">Estadísticas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#cta">Donaciones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contacto</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MetaList</span></strong> | Todos los derechos reservados
+      </div>
+      <div class="credits">
+        Diseñado por <a href="https://github.com/MariusTNTX?tab=repositories">Mario Molina</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- MODAL CAMPOS: Select Tabla, buscar por keys (campo+texto+buscar), campos, Boton aplicar cambios -->
+  <div class="modal fade" id="modalCampos" tabindex="-1" aria-labelledby="modalCamposLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-dark border-bottom border-danger border-4">
+          <h1 class="modal-title fs-5 text-white" id="modalCamposLabel">Insertar o Actualizar Contenido</h1>
+          <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row justify-content-center">
+          <!-- Tabla -->
+          <div class="col-12 col-sm-8 col-lg-4 text-center mb-3">
+            <label for="selectTablaInsertar" class="form-label fs-3">Tabla:</label>
+            <select class="form-select form-select-lg mb-3 shadow-sm" id="selectTablaInsertar" aria-label=".form-select-lg example">
+              <option value="playlists">Playlists</option>
+              <option value="canciones_playlists">Canciones</option>
+            </select>
+          </div>
+          <!-- Buscador -->
+          <div class="col-12">
+            <label for="camposBuscadorActualizar" class="form-label fst-italic">Opcional: Si deseas actualizar busca el registro correspondiente</label>
+            <div id="camposBuscadorActualizar" class="mb-3">
+              <div class="input-group shadow-sm mb-2">
+                <span class="input-group-text">nombrePlaylist</span>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="text-center"><button class="btn btn-outline-secondary bg-dark text-white shadow" type="button">Buscar</button></div>
+          </div>
+          <hr class="mt-4 mb-0">
+          <!-- Campos -->
+          <div class="col-12 text-center bg-light py-4">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6 mb-3">
+                <label for="nombrePlaylistInput" class="form-label fw-bold">nombrePlaylist</label>
+                <input type="text" class="form-control shadow-sm" id="nombrePlaylistInput">
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <label for="categoriaPlaylistInput" class="form-label fw-bold">categoriaPlaylist</label>
+                <select class="form-select shadow-sm" id="categoriaPlaylistInput">
+                  <option value="Etapas Historicas">Etapas Historicas</option>
+                  <option value="Géneros">Géneros</option>
+                  <option value="Discográficas">Discográficas</option>
+                  <option value="Bandas">Bandas</option>
+                </select>
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <label for="imagenPlaylistInput" class="form-label fw-bold">imagenPlaylist</label>
+                <textarea class="form-control shadow-sm" id="imagenPlaylistInput" rows="3"></textarea>
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <label for="enlacePlaylistInput" class="form-label fw-bold">enlacePlaylist</label>
+                <textarea class="form-control shadow-sm" id="enlacePlaylistInput" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4 mt-0">
+          <!-- Botón -->
+          <div class="col-12 text-center mb-3">
+            <div class="more p-0"><button class="btn btn-primary shadow">Aplicar Cambios</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL TABLAS: Perdonar/Banear/Colaboradores(omitir tabla), Banear(añadir tiempo con select) -->
+  <div class="modal fade" id="modalTablas" tabindex="-1" aria-labelledby="modalTablasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-dark border-bottom border-danger border-4">
+          <h1 class="modal-title fs-5 text-white" id="modalTablasLabel">Borrar Contenido</h1>
+          <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row justify-content-center">
+          <!-- Tabla -->
+          <div class="col-12 col-sm-8 col-lg-4 text-center mb-3">
+            <label for="selectTablaInsertar" class="form-label fs-3">Tabla:</label>
+            <select class="form-select form-select-lg mb-3 shadow-sm" id="selectTablaInsertar" aria-label=".form-select-lg example">
+              <option value="playlists">Playlists</option>
+              <option value="canciones_playlists">Canciones</option>
+            </select>
+          </div>
+          <!-- Buscador -->
+          <div class="col-12">
+            <div id="camposBuscadorActualizar" class="mb-3">
+              <div class="input-group shadow-sm mb-2">
+                <span class="input-group-text">nombrePlaylist</span>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="text-center"><button class="btn btn-outline-secondary bg-dark text-white shadow" type="button">Buscar</button></div>
+          </div>
+          <hr class="mt-4 mb-0">
+          <!-- Campos -->
+          <div class="col-12 text-center bg-light py-4">
+            <div class="row justify-content-center">
+              <table class="table table-hover w-auto">
+                <thead>
+                  <tr>
+                    <th><div class="form-check"><input class="form-check-input" type="checkbox"></div></th>
+                    <th>nombrePlaylist</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider text-start">
+                  <tr>
+                    <td><div class="form-check"><input class="form-check-input" type="checkbox"></div></td>
+                    <td>Best of Megadeth</td>
+                  </tr>
+                  <tr>
+                    <td><div class="form-check"><input class="form-check-input" type="checkbox"></div></td>
+                    <td>Best of Nightwish</td>
+                  </tr>
+                  <tr>
+                    <td><div class="form-check"><input class="form-check-input" type="checkbox"></div></td>
+                    <td>Best of Eluveitie</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <hr class="mb-4 mt-0">
+          <!-- Botón -->
+          <div class="col-12 text-center mb-3">
+            <div class="more p-0"><button class="btn btn-primary shadow">Aplicar Cambios</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONFIRMACIÓN: Cambiar mensajes -->
+  <div class="modal fade" id="confirmacionAccion" tabindex="-1" aria-labelledby="confirmacionAccionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-dark border-bottom border-danger border-4">
+          <h1 class="modal-title fs-5 text-white" id="confirmacionAccionLabel">Confirmación</h1>
+          <button type="button" class="btn-close bg-white mdlConfirm close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row justify-content-center">
+          <h2 class="mb-3">¿Estás seguro de que deseas <span class="mdlConfirm sentence">crear la base de datos desde cero</span>?</h2>
+          <!-- <div class="col-1 asterisk">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-asterisk h-100" viewBox="0 0 16 16">
+              <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"></path>
+            </svg>
+          </div>
+          <div class="col-11">
+            <p class="fst-italic mb-0">Comprueba que no existe una base de datos llamada "metalist"</p>
+          </div> -->
+        </div>
+        <div class="modal-footer">
+          <div class="less p-0"><button type="button" class="btn btn-dark mdlConfirm back" data-bs-dismiss="modal">Cancelar</button></div>
+          <div class="more p-0"><button type="button" class="btn btn-primary mdlConfirm next">Aceptar</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL RESTORE (único): -->
+  <div class="modal fade" id="modalRestore" tabindex="-1" aria-labelledby="modalRestoreLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-dark border-bottom border-danger border-4">
+          <h1 class="modal-title fs-5 text-white" id="modalRestoreLabel">Restaurar Copia de Seguridad</h1>
+          <button type="button" class="btn-close bg-white mdlRestore close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row justify-content-center pt-0">
+          <div class="col-12 text-center bg-light py-4">
+            <div class="row justify-content-center overflow-auto" id="restoreListContainer">
+              <table class="table table-hover w-auto">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider text-start mdlRestore list">
+                  <!-- <tr>
+                    <td><div class="form-check"><input class="form-check-input mdlRestore check" type="radio" name="radioRestores"></div></td>
+                    <td>17/04/2023</td>
+                    <td>22:43:03</td>
+                  </tr>
+                  <tr>
+                    <td><div class="form-check"><input class="form-check-input mdlRestore check" type="radio" name="radioRestores"></div></td>
+                    <td>19/04/2023</td>
+                    <td>15:55:54</td>
+                  </tr>
+                  <tr>
+                    <td><div class="form-check"><input class="form-check-input mdlRestore check" type="radio" name="radioRestores"></div></td>
+                    <td>20/04/2023</td>
+                    <td>18:07:49</td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <hr class="mb-4 mt-0">
+          <!-- Botón -->
+          <div class="col-12 text-center mb-3">
+            <div class="more p-0"><button class="btn btn-primary shadow mdlRestore next">Restaurar Copia</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL IMPORTAR (única): -->
+  <div class="modal fade" id="modalImportar" tabindex="-1" aria-labelledby="modalImportarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-dark border-bottom border-danger border-4">
+          <h1 class="modal-title fs-5 text-white" id="modalImportarLabel">Importar CSVs</h1>
+          <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row justify-content-center">
+          <!-- Tabla -->
+          <div class="col-12 col-sm-8 col-lg-4 text-center">
+            <label for="selectTablaInsertar" class="form-label fs-3">Tabla:</label>
+            <select class="form-select form-select-lg shadow-sm" id="selectTablaInsertar" aria-label=".form-select-lg example">
+              <option value="playlists">Playlists</option>
+              <option value="canciones_playlists">Canciones</option>
+            </select>
+          </div>
+          <hr class="mt-4 mb-0">
+          <!-- Campos -->
+          <div class="col-12 text-center bg-light py-4">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6 mb-3">
+                <label for="nombrePlaylistInput" class="form-label fw-bold">Archivo CSV</label>
+                <input type="file" class="form-control shadow-sm" id="archivoCSV">
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <label for="tipoImportacion" class="form-label fw-bold">Tipo de Importación</label>
+                <select class="form-select shadow-sm" id="tipoImportacion">
+                  <option value="agregar">Agregar solo los registros nuevos</option>
+                  <option value="sobreescribir">Sobreescribir todos los registros</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4 mt-0">
+          <!-- Botón -->
+          <div class="col-12 text-center mb-3">
+            <div class="more p-0"><button class="btn btn-primary shadow">Importar CSV</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL EXPORTAR y VACIAR: -->
+  <div class="modal fade" id="modalExportar" tabindex="-1" aria-labelledby="modalExportarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-dark border-bottom border-danger border-4">
+          <h1 class="modal-title fs-5 text-white mdlExportClean title" id="modalExportarLabel">Exportar CSVs</h1>
+          <button type="button" class="btn-close bg-white mdlExportClean close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row justify-content-center">
+          <!-- Tabla -->
+          <div class="col-12 col-sm-10 col-lg-8 text-center w-auto mt-4 mb-3">
+            <div class="row">
+              <div class="col-auto"><label for="unaTablaExportar" class="form-label fs-3">Tabla:</label></div>
+              <div class="col-auto">
+                <select class="form-select form-select-lg shadow-sm mdlExportClean list" id="selectTablaInsertar" aria-label=".form-select-lg example">
+                  <!-- <option value="playlists">Playlists</option>
+                  <option value="canciones_playlists">Canciones</option> -->
+                </select>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4">
+          <!-- Botón -->
+          <div class="col-12 text-center mb-3">
+            <div class="more p-0"><button class="btn btn-primary shadow mdlExportClean next">Exportar CSV</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alerts -->
+  <div id="alertTemplate"></div>
+
+  <div id="preloader"></div>
+  <a href="administracion.html#" class="back-to-top d-flex align-items-center justify-content-center"><span class="d-none">.</span><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- MetaList JS -->
+  <script src="js/api.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/administracion.js"></script>
+
+</body>
+
+</html>
