@@ -1,4 +1,7 @@
 <?php 
+  ini_set('session.use_only_cookies', false);
+  ini_set('session.use_cookies', false);
+  ini_set('session.use_trans_sid', true);
   session_start(); //Inicio/mantenimiento de la sesión
   //Si se ha hecho clic en "regresar" o si no está establecida la variable de finalización 
   //se destruye la sesión y se redirige al index. Sino se muestra el formulario

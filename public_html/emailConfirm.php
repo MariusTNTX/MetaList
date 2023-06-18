@@ -1,4 +1,7 @@
 <?php 
+  ini_set('session.use_only_cookies', false);
+  ini_set('session.use_cookies', false);
+  ini_set('session.use_trans_sid', true);
   session_start(); //Inicio/mantenimiento de la sesión
   if(isset($_GET['correo'])) $_SESSION['correo']=$_GET['correo'];
   if(isset($_SESSION['end']) || !isset($_SESSION['step'])){
